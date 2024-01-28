@@ -121,7 +121,7 @@ function getAllDetails() {
                     function getAllDetails() {
                         let cap = country.capital
                         if (cap !== undefined) {
-                            const url = `https://api.openweathermap.org/data/2.5/weather?q=${cap}&appid=e24d18a4db08c6e0606eeaa49d24069a`;
+                            const url = `https://api.openweathermap.org/data/2.5/weather?q=${cap}&appid=e24d18a4db08c6e0606eeaa49d24069a&units=metric`;
                             fetch(url)
                                 .then(res => res.json())
                                 .then((response) => {
