@@ -58,14 +58,9 @@ function getAllDetails() {
                 countCode.innerText = `Country Code : ${coutCode || 'No Data'}`
                 cardDetails.append(countCode)
 
-                const countLat = document.createElement('div')
-                countLat.setAttribute('class', 'col-12')
-                cardDetails.append(countLat)
-
-
 
                 const countlat = document.createElement('div')
-                countlat.setAttribute('class', 'col-12')
+                countlat.setAttribute('class', '')
                 countlat.innerText = `LATNG : ${latlng}`
                 cardDetails.append(countlat)
 
@@ -101,14 +96,70 @@ function getAllDetails() {
 
 
                 const backBtnRow = document.createElement('div')
-                backBtnRow.setAttribute('class', 'row')
+                backBtnRow.setAttribute('class', 'column')
 
 
                 const backBtn = document.createElement('button')
                 backBtn.innerText = 'Back'
                 backBtnRow.append(backBtn)
 
+                const more = document.createElement('button')
+                more.innerText = 'More'
+                backBtnRow.append(more)
 
+                const det = document.createElement('div')
+                det.setAttribute('class','det text-center')
+
+                const row2 = document.createElement('div')
+                det.append(row2)
+
+                const subReg = document.createElement('div')
+                subReg.innerText = `SubRegion :${country.subregion}`
+                row2.append(subReg)
+                const population = document.createElement('div')
+                population.innerText = `Population :${country.population}`
+                row2.append(population)
+                const time = document.createElement('div')
+                time.innerText = `Time Zone :${country.timezones}`
+                row2.append(time)
+                const area = document.createElement('div')
+                area.innerText = `Area :${country.area}`
+                row2.append(area)
+                const callingCode = document.createElement('div')
+                callingCode.innerText = `Calling Code :+${country.callingCodes}`
+                row2.append(callingCode)
+                const ind = document.createElement('div')
+                ind.innerText = `Independent :${country.independent===true?'YES':'NO'}`
+                row2.append(ind)
+
+
+                const back = document.createElement('button')
+                back.innerText = 'BACK'
+                row2.append(back)
+
+                const home = document.createElement('button')
+                home.innerText = 'HOME'
+                row2.append(home)
+
+                
+                home.addEventListener('click',function(){
+                    card.removeChild(det)
+                    card.append(cardBody)
+                })
+                
+                back.addEventListener('click',function(){
+                    card.removeChild(det)
+                    card.append(weather)
+                })
+                
+                
+                
+                
+                more.addEventListener('click', function () {
+                    card.removeChild(weather)
+                    card.append(det)
+
+                })
 
 
                 backBtn.addEventListener('click', function () {

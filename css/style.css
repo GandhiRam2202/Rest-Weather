@@ -26,6 +26,7 @@ img{
 .card-text{
     text-align: center;
     align-content: center;
+    
 }
 .weatherBody div{
     font-size: 20px;
@@ -60,4 +61,23 @@ button{
     font-weight: bolder;
     text-align: center;
     
+}
+.det{
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    margin-top: 15px;
+    font-weight: bolder;
+    text-align: center;
+}
+.det button{
+    font-size: 20px;
+}
+
+
+.det div{
+    font-size: 20px;
+    margin-top: 15px;
+    font-weight: bolder;
+    text-align: center;
 }
